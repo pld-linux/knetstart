@@ -35,7 +35,7 @@ DSL and other large networks.
 make
 
 %install
-make install
+%{__make} install
 
 %files
 
