@@ -1,5 +1,3 @@
-%define kdeprefix /usr
-
 Summary:	A simple ethernet setup tool for RedHat systems
 Summary(pl):	Prosty konfigurator sieci dla KDE
 Name:		knetstart
@@ -10,7 +8,8 @@ Group:		Networking/Utilities
 #Source0:	ftp.slinuxmachines.com:/pub/Linux/%{name}-%{version}.tar.gz   host not found
 Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/network/%{name}-%{version}.tar.gz
 #Source0:	ftp://ftp.kde.com/pub/Administration/Network/KNetstart/knetstart-1.0.tar.gz
-Requires:	qt kdelibs
+BuildRequires:	kdelibs-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This KDE program is a simple ethernet setup tool for RedHat systems.
@@ -49,22 +48,18 @@ wpisywane do odpowiednich plików.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install
 
-%files
-%defattr(644,root,root,755)
-%{kdeprefix}/share/doc/HTML/en/knetstart/index-1.html
-%{kdeprefix}/share/doc/HTML/en/knetstart/index-2.html
-%{kdeprefix}/share/doc/HTML/en/knetstart/index-3.html
-%{kdeprefix}/share/doc/HTML/en/knetstart/index-4.html
-%{kdeprefix}/share/doc/HTML/en/knetstart/index-5.html
-%{kdeprefix}/share/doc/HTML/en/knetstart/index-6.html
-%{kdeprefix}/share/doc/HTML/en/knetstart/index.html
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-%{kdeprefix}/bin/knetstart
-%{kdeprefix}/share/applnk/Internet/knetstart.kdelnk
-%{kdeprefix}/share/icons/knetstart.xpm
-%{kdeprefix}/share/icons/mini/knetstart.xpm
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files -f %{name}.lang
+%defattr(644,root,root,755)
+%{_bindir}/knetstart
+%{_applnkdir}/Internet/knetstart.kdelnk
+%{_pixmapsdir}/knetstart.xpm
+%{_pixmapsdir}/mini/knetstart.xpm
