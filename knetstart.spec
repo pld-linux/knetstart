@@ -1,6 +1,7 @@
 %define kdeprefix /usr
 
 Summary:	A simple ethernet setup tool for RedHat systems
+Summary(pl):	Prosty konfigurator sieci dla KDE
 Name:		knetstart
 Version:	0.7
 Release:	1
@@ -8,8 +9,9 @@ License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
-Source0:	ftp.slinuxmachines.com:/pub/Linux/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{version}.tar.gz
+#Source0:	ftp.slinuxmachines.com:/pub/Linux/%{name}-%{version}.tar.gz   host not found
+Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/network/%{name}-%{version}.tar.gz
+#Source0:	ftp://ftp.kde.com/pub/Administration/Network/KNetstart/knetstart-1.0.tar.gz
 Requires:	qt kdelibs
 
 %description
@@ -29,6 +31,17 @@ are all given by the server and inserted in the correct places by
 Knetstart. The DHCP protocol is becoming increasingly popular with DSL
 and other large networks.
 
+%description -l pl
+Ten program KDE jest prostym konfiguratorem sieci. Potrzebuje znaæ
+najwy¿ej 3 adresy IP. KNetstart nie tylko konfiguruje lokalny
+komputer, mo¿e tak¿e sprawdziæ bramkê i serwer DNS. Podczas
+poszukiwania wy¶wietla siê animacja.
+
+KNetstart ma wbudowanego klienta DHCP bazuj±cego na pump 0.6.7. Ten
+klient mo¿e automatycznie ustawiæ kartê u¿ywaj±c protoko³u DHCP. Adres
+IP, maska sieci, adres bramki i serwerów DNS s± brane z serwera i
+wpisywane do odpowiednich plików.
+
 %prep
 %setup -q
 
@@ -42,7 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-
 %{kdeprefix}/share/doc/HTML/en/knetstart/index-1.html
 %{kdeprefix}/share/doc/HTML/en/knetstart/index-2.html
 %{kdeprefix}/share/doc/HTML/en/knetstart/index-3.html
