@@ -32,7 +32,7 @@ DSL and other large networks.
 
 %build
 ./configure
-make
+%{__make}
 
 %install
 %{__make} install
