@@ -2,15 +2,15 @@
 %define version 0.7
 %define name knetstart
 
-Summary: A simple ethernet setup tool for RedHat systems
-Name: %{name}
-Version: %{version}
-Release: 1
-Copyright: GPL
-Group: Networking/Utilities
-Source: ftp.slinuxmachines.com:/pub/Linux/%{name}-%{version}.tar.gz
-#Source: %{name}-%{version}.tar.gz
-Requires: qt kdelibs
+Summary:	A simple ethernet setup tool for RedHat systems
+Name:		%{name}
+Version:	%{version}
+Release:	1
+License:	GPL
+Group:		Networking/Utilities
+Source:		ftp.slinuxmachines.com:/pub/Linux/%{name}-%{version}.tar.gz
+#Source:	%{name}-%{version}.tar.gz
+Requires:	qt kdelibs
 
 %description
 This KDE program is a simple ethernet setup tool for RedHat systems. It
@@ -28,7 +28,7 @@ correct places by Knetstart. The DHCP protocol is becoming increasingly popular 
 DSL and other large networks.
 
 %prep
-%setup
+%setup -q
 
 %build
 ./configure
