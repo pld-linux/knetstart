@@ -7,6 +7,7 @@ License:	GPL
 Group:		Networking/Utilities
 #Source0:	ftp.slinuxmachines.com:/pub/Linux/%{name}-%{version}.tar.gz   host not found
 Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/network/%{name}-%{version}.tar.gz
+# Source0-md5:	1575bcfaa7665c384eb46783acc9f83f
 #Source0:	ftp://ftp.kde.com/pub/Administration/Network/KNetstart/knetstart-1.0.tar.gz
 BuildRequires:	kdelibs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
