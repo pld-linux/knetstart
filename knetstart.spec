@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%{_bindir}/knetstart
+%attr(755,root,root) %{_bindir}/knetstart
 %{_applnkdir}/Internet/knetstart.kdelnk
 %{_pixmapsdir}/knetstart.xpm
 %{_pixmapsdir}/mini/knetstart.xpm
