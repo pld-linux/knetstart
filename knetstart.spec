@@ -1,5 +1,5 @@
 Summary:	A simple ethernet setup tool for RedHat systems
-Summary(pl):	Prosty konfigurator sieci dla KDE
+Summary(pl.UTF-8):   Prosty konfigurator sieci dla KDE
 Name:		knetstart
 Version:	0.7
 Release:	1
@@ -29,16 +29,16 @@ are all given by the server and inserted in the correct places by
 Knetstart. The DHCP protocol is becoming increasingly popular with DSL
 and other large networks.
 
-%description -l pl
-Ten program KDE jest prostym konfiguratorem sieci. Potrzebuje znaæ
-najwy¿ej 3 adresy IP. KNetstart nie tylko konfiguruje lokalny
-komputer, mo¿e tak¿e sprawdziæ bramkê i serwer DNS. Podczas
-poszukiwania wy¶wietla siê animacja.
+%description -l pl.UTF-8
+Ten program KDE jest prostym konfiguratorem sieci. Potrzebuje znaÄ‡
+najwyÅ¼ej 3 adresy IP. KNetstart nie tylko konfiguruje lokalny
+komputer, moÅ¼e takÅ¼e sprawdziÄ‡ bramkÄ™ i serwer DNS. Podczas
+poszukiwania wyÅ›wietla siÄ™ animacja.
 
-KNetstart ma wbudowanego klienta DHCP bazuj±cego na pump 0.6.7. Ten
-klient mo¿e automatycznie ustawiæ kartê u¿ywaj±c protoko³u DHCP. Adres
-IP, maska sieci, adres bramki i serwerów DNS s± brane z serwera i
-wpisywane do odpowiednich plików.
+KNetstart ma wbudowanego klienta DHCP bazujÄ…cego na pump 0.6.7. Ten
+klient moÅ¼e automatycznie ustawiÄ‡ kartÄ™ uÅ¼ywajÄ…c protokoÅ‚u DHCP. Adres
+IP, maska sieci, adres bramki i serwerÃ³w DNS sÄ… brane z serwera i
+wpisywane do odpowiednich plikÃ³w.
 
 %prep
 %setup -q
