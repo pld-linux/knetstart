@@ -1,5 +1,5 @@
 Summary:	A simple ethernet setup tool for RedHat systems
-Summary(pl.UTF-8):   Prosty konfigurator sieci dla KDE
+Summary(pl.UTF-8):	Prosty konfigurator sieci dla KDE
 Name:		knetstart
 Version:	0.7
 Release:	1
